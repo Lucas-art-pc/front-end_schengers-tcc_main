@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+@theme{
+  --color-blue-primary: #1C398E;
+  --color-blue-hover: #12275F;
+  --color-blue-secondary: #CFE2FF;
+  --color-yellow-primary: #FCAC21;
+  --color-yellow-hover: #D68906;
+
+
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+
+  html{
+    @apply font-inter;
+  }
+}

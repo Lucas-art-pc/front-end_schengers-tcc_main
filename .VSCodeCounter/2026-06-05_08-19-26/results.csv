@@ -1,0 +1,110 @@
+"filename", "language", "JSON", "JavaScript", "Markdown", "HTML", "JavaScript JSX", "CSS", "comment", "blank", "total"
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\README.md", "Markdown", 0, 0, 9, 0, 0, 0, 0, 8, 17
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\eslint.config.js", "JavaScript", 0, 28, 0, 0, 0, 0, 0, 2, 30
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\index.html", "HTML", 0, 0, 0, 13, 0, 0, 0, 1, 14
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\package-lock.json", "JSON", 4210, 0, 0, 0, 0, 0, 0, 1, 4211
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\package.json", "JSON", 35, 0, 0, 0, 0, 0, 0, 1, 36
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\admin\dataService.js", "JavaScript", 0, 21, 0, 0, 0, 0, 0, 8, 29
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\api.js", "JavaScript", 0, 34, 0, 0, 0, 0, 0, 7, 41
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\auth\dataUser.js", "JavaScript", 0, 4, 0, 0, 0, 0, 0, 2, 6
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\auth\logoutService.js", "JavaScript", 0, 12, 0, 0, 0, 0, 1, 1, 14
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\auth\studentAuthService.js", "JavaScript", 0, 44, 0, 0, 0, 0, 10, 12, 66
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\auth\teacherAuthService.js", "JavaScript", 0, 9, 0, 0, 0, 0, 0, 3, 12
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\courses\activities\activityService.js", "JavaScript", 0, 21, 0, 0, 0, 0, 0, 5, 26
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\courses\coursesService.js", "JavaScript", 0, 58, 0, 0, 0, 0, 0, 16, 74
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\courses\lessons\lessonsService.js", "JavaScript", 0, 26, 0, 0, 0, 0, 0, 4, 30
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\curriculum\curriculumService.js", "JavaScript", 0, 9, 0, 0, 0, 0, 0, 1, 10
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\studyPlans\studyPlans.js", "JavaScript", 0, 18, 0, 0, 0, 0, 1, 4, 23
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\api\services\vacancies\vacanciesService.js", "JavaScript", 0, 9, 0, 0, 0, 0, 0, 2, 11
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\ActivityCard\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 32, 0, 0, 2, 34
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\ActivityModal\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 219, 0, 13, 32, 264
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\AreaCard\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 32, 0, 0, 4, 36
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\AreaModal\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 156, 0, 5, 14, 175
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\AreaTag\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 14, 0, 0, 1, 15
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\CardDashboardTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 8, 0, 1, 0, 9
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\ClassModal\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 174, 0, 0, 16, 190
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\CourseCardTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 56, 0, 0, 7, 63
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\CourseCard\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 24, 0, 0, 4, 28
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\CourseCarousel\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 45, 0, 0, 8, 53
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\CoursePart\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 232, 0, 4, 10, 246
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\CoursesBarChart\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 50, 0, 0, 5, 55
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\CoursesCarrousel\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 99, 0, 0, 20, 119
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\FieldError\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 8, 0, 0, 1, 9
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\FieldHint\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 3, 0, 0, 0, 3
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\FieldLabel\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 13, 0, 0, 0, 13
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\FilterButton\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 12, 0, 0, 0, 12
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Footer\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 115, 0, 5, 22, 142
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\GuestRouteStudent\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 8, 0, 0, 2, 10
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\GuestRouteTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 8, 0, 0, 3, 11
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\HeaderTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 37, 0, 0, 8, 45
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Heading\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 63, 0, 6, 7, 76
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\InputFile\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 15, 0, 0, 0, 15
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Input\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 11, 0, 0, 1, 12
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Label\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 7, 0, 0, 0, 7
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Link\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 18, 0, 0, 6, 24
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Modal\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 108, 0, 0, 16, 124
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\NavBar\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 42, 0, 2, 3, 47
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\PageContainerTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 13, 0, 1, 1, 15
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\PassworInput\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 33, 0, 0, 3, 36
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\PrivateRouteAdmin\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 14, 0, 0, 4, 18
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\PrivateRouteStudent\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 8, 0, 1, 1, 10
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\PrivateRouteTeacherApproved\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 14, 0, 1, 4, 19
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\PrivateRouteTeacherPending\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 15, 0, 1, 4, 20
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\SidebarAdmin\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 75, 0, 3, 12, 90
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\SidebarItem\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 16, 0, 0, 1, 17
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\SidebarTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 62, 0, 3, 7, 72
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Sidebar\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 13, 0, 0, 2, 15
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\StatusBadge\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 7, 0, 0, 1, 8
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\SucessCourseCreate\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 34, 0, 0, 1, 35
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Swipper\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 70, 0, 2, 8, 80
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Textarea\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 26, 0, 0, 0, 26
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\TopBar\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 44, 0, 2, 4, 50
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\components\Typograph\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 28, 0, 5, 7, 40
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\contexts\AuthContext.js", "JavaScript", 0, 2, 0, 0, 0, 0, 0, 1, 3
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\contexts\AuthProvider.jsx", "JavaScript JSX", 0, 0, 0, 0, 48, 0, 0, 8, 56
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\hooks\useAuth.js", "JavaScript", 0, 5, 0, 0, 0, 0, 0, 1, 6
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\hooks\useLogin.js", "JavaScript", 0, 51, 0, 0, 0, 0, 0, 10, 61
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\hooks\useLogout.js", "JavaScript", 0, 18, 0, 0, 0, 0, 1, 4, 23
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\hooks\useRegister.js", "JavaScript", 0, 41, 0, 0, 0, 0, 0, 5, 46
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\index.css", "CSS", 0, 0, 0, 0, 0, 15, 0, 6, 21
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\layouts\AdminLayout\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 35, 0, 3, 4, 42
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\layouts\FormLayout\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 34, 0, 1, 7, 42
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\layouts\GuestLayout\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 12, 0, 0, 3, 15
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\layouts\StudentLayout\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 35, 0, 0, 6, 41
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\layouts\TeacherLayout\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 16, 0, 2, 3, 21
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\main.jsx", "JavaScript JSX", 0, 0, 0, 0, 10, 0, 0, 2, 12
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\AdminPages\DashboardAdmin\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 307, 0, 5, 27, 339
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\AdminPages\ListAreas\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 96, 0, 9, 21, 126
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\AdminPages\ListCourses\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 124, 0, 0, 13, 137
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\AdminPages\ListStudents\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 119, 0, 0, 13, 132
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\AdminPages\ListTeachers\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 112, 0, 0, 10, 122
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\CoursePages\ActivityPage\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 207, 0, 7, 28, 242
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\CoursePages\CourseDetails\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 123, 0, 2, 28, 153
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\CoursePages\FormCourse\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 543, 0, 21, 38, 602
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\CoursePages\LessonPlayer\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 96, 0, 4, 14, 114
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\FormPages\FormCurriculum\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 361, 0, 13, 28, 402
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\FormPages\FormStudent\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 111, 0, 1, 11, 123
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\FormPages\FormTeacherUser\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 146, 0, 0, 17, 163
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\FormPages\LoginStudent\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 70, 0, 1, 5, 76
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\FormPages\LoginTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 65, 0, 1, 5, 71
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\GuestPages\CoursesMarketing\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 91, 0, 4, 20, 115
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\GuestPages\Homepage\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 134, 0, 3, 22, 159
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\GuestPages\LearnMore\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 167, 0, 5, 25, 197
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\StudentPages\ForgotPassword\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 78, 0, 0, 11, 89
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\StudentPages\ResetPassword\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 126, 0, 0, 18, 144
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\StudentPages\StudentCoursePage\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 220, 0, 8, 26, 254
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\StudentPages\StudentCourses\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 71, 0, 5, 8, 84
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\StudentPages\StudentDashboard\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 197, 0, 13, 38, 248
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\StudentPages\StudentProfile\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 188, 0, 4, 26, 218
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\StudentPages\StudyPlans\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 146, 0, 0, 19, 165
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\TeacherPages\CoursesTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 110, 0, 4, 15, 129
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\TeacherPages\DashboardTeacher\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 46, 0, 1, 7, 54
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\VacanciePages\VacanciePage\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 154, 0, 5, 26, 185
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\pages\VacanciePages\Vacancies\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 164, 0, 4, 23, 191
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\router\index.jsx", "JavaScript JSX", 0, 0, 0, 0, 113, 0, 0, 8, 121
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\validators\candidateFormValidators.js", "JavaScript", 0, 38, 0, 0, 0, 0, 0, 6, 44
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\validators\colorsAreaValidator.js", "JavaScript", 0, 18, 0, 0, 0, 0, 0, 2, 20
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\validators\courseFormValidator.js", "JavaScript", 0, 13, 0, 0, 0, 0, 0, 0, 13
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\src\validators\uploadVideoCourse.js", "JavaScript", 0, 40, 0, 0, 0, 0, 0, 10, 50
+"c:\Users\Usuario\Desktop\tcc-schengenrs\front-end_tcc_schengers\vite.config.js", "JavaScript", 0, 6, 0, 0, 0, 0, 1, 2, 9
+"Total", "-", 4245, 525, 9, 13, 6756, 15, 195, 960, 12718
