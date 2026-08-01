@@ -56,14 +56,6 @@ export const FormTeacherUser = () => {
 
       navigate("/auth/login-teacherUser");
     } catch (err) {
-      setForm({
-        name: "",
-        email: "",
-        apresentation: "",
-        term_privacy: false,
-        password: "",
-        password_confirmation: "",
-      });
 
       if (err.response?.data?.errors) {
         const errors = err.response.data.errors;

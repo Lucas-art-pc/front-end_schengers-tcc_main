@@ -39,6 +39,7 @@ export const VacanciePage = () => {
   }
 
   const requisitos = vacancie.requirements_vacancy.split(",");
+  const responsabilidades = vacancie.tasks_vacancy.split(",");
 
   if (error || !vacancie) {
     return (
@@ -138,7 +139,15 @@ export const VacanciePage = () => {
                   Atividades
                 </Typograph>
                 <p className="text-gray-600 leading-relaxed">
-                  {vacancie.tasks_vacancy || "Nenhuma atividade informada."}
+                  <ul>
+                    {responsabilidades.length > 0 ? (
+                      responsabilidades.map((requisito, index) => (
+                        <li key={index}> - {requisito.trim()}</li>
+                      ))
+                    ) : (
+                      <li>Nenhuma responsabilidade informada.</li>
+                    )}
+                  </ul>
                 </p>
               </section>
             </div>

@@ -106,7 +106,7 @@ export const ListCourses = () => {
                         </span>
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-slate-400">{s.duration}</td>
+                    <td className="px-4 py-3 text-slate-400">{s.duration}h</td>
                     <td className="px-4 py-3 text-slate-600">
                       <span className={`${s.active == true ? "bg-green-600" : "bg-red-600"} text-gray-800 text-xs font-medium px-2.5 py-1 rounded-full`}>
                         {s.active == true ? "Ativo" : "Inativo"}
