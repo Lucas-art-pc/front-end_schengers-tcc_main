@@ -1,16 +1,23 @@
-FROM node:20-alpine
+# Etapa 1: build do React/Vite
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
-# Cache de dependências
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
-# Copia o restante do código (também é montado via volume no compose)
 COPY . .
 
-EXPOSE 5173
+# A variável precisa existir NO MOMENTO DO BUILD (Vite "assa" ela no código)
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
 
-# --host 0.0.0.0 é essencial: sem isso o Vite só escuta em localhost
-# dentro do container e a porta mapeada não responde
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+RUN npm run build
+
+# Etapa 2: servir os arquivos estáticos com Nginx
+FROM nginx:alpine
+
+COPY --from=build /app/dist /usr/share/nginx/html
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 8080
