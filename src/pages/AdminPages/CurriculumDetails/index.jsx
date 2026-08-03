@@ -187,7 +187,7 @@ function DocumentCard({ label, path }) {
         </p>
       </div>
       <a
-        href={`http://localhost:8000${path}`}
+        href={`https://schengers-backend-production.up.railway.app${path}`}
         target="_blank"
         rel="noopener noreferrer"
         className="shrink-0 text-xs font-medium text-blue-600 hover:text-blue-800 bg-white border border-blue-100
