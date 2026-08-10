@@ -21,7 +21,7 @@ export const LoginStudent = () => {
 
   return (
     <FormLayout
-      title="Login de Aluno"
+      title="Login do estudante"
       description="Preencha os dados para criar sua conta"
       onSubmit={onSubmit}
     >
@@ -32,7 +32,7 @@ export const LoginStudent = () => {
       )}
       <div className="space-y-5">
         <div>
-          <Label>Email</Label>
+          <Label>E-mail</Label>
           <Input
             type={"text"}
             name={"email"}

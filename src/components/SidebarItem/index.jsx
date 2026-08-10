@@ -10,7 +10,7 @@ export const SidebarItem = ({ icon, label, to, onClick }) => (
     onClick={onClick}
   >
     {icon}
-    <span className="opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+    <span className="transition whitespace-nowrap">
       {label}
     </span>
   </NavLink>

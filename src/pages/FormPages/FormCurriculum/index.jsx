@@ -9,6 +9,7 @@ import {
   validateFile,
 } from "../../../validators/candidateFormValidators";
 import { Label } from "../../../components/Label";
+import { Typograph } from "../../../components/Typograph";
 
 // Etapas
 const STEPS = [
@@ -106,7 +107,6 @@ export const CurriculumForm = () => {
       await storeCurriculum(id, formData);
       setSuccess(true);
     } catch (err) {
-
       const serverErrors = err.response?.data?.errors;
       if (serverErrors) setErrors(serverErrors);
       else
@@ -140,8 +140,11 @@ export const CurriculumForm = () => {
     return (
       <FormLayout title="Currículo Enviado!">
         <p className="text-center text-green-600 font-medium">
-          Sua candidatura foi enviada com sucesso. Boa sorte!
+          Sua candidatura foi enviada com sucesso.
         </p>
+        <Typograph tag="subtitle" className="text-center text-gray-500 ">
+          Em caso de aprovação, você receberá um e-mail.
+        </Typograph>
         <p className="text-center text-gray-500 text-sm mt-2">
           Redirecionando para vagas em {countdown}s...
         </p>
@@ -163,6 +166,7 @@ export const CurriculumForm = () => {
       }
     >
       {/* Barra de progresso */}
+
       <div className="flex gap-1 mb-2">
         {STEPS.map((_, i) => (
           <div
@@ -185,22 +189,28 @@ export const CurriculumForm = () => {
         <>
           <div className="flex flex-col gap-1">
             <Label className="text-sm font-medium text-gray-700">
-              Nome completo *
+              Nome completo <span className="text-red-700">*</span>
             </Label>
-            <Input name="name" value={form.name} onChange={handleChange} />
+            <Input
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Digite seu nome completo..."
+            />
             {errors.name && (
               <span className="text-xs text-red-500">{errors.name}</span>
             )}
           </div>
           <div className="flex flex-col gap-1">
             <Label className="text-sm font-medium text-gray-700">
-              E-mail *
+              E-mail <span className="text-red-700">*</span>
             </Label>
             <Input
               name="email"
               type="email"
               value={form.email}
               onChange={handleChange}
+              placeholder="Digite seu email..."
             />
             {errors.email && (
               <span className="text-xs text-red-500">{errors.email}</span>
@@ -208,7 +218,7 @@ export const CurriculumForm = () => {
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">
-              Telefone *
+              Telefone <span className="text-red-700">*</span>
             </label>
             <Input
               name="phone"
@@ -256,7 +266,7 @@ export const CurriculumForm = () => {
         <>
           <div className="flex flex-col gap-1">
             <Label className="text-sm font-medium text-gray-700">
-              Nível de Formação *
+              Nível de Formação <span className="text-red-700">*</span>
             </Label>
             <select
               name="education_level"
@@ -279,19 +289,22 @@ export const CurriculumForm = () => {
           </div>
           <div className="flex flex-col gap-1">
             <Label className="text-sm font-medium text-gray-700">
-              Instituição *
+              Instituição <span className="text-red-700">*</span>
             </Label>
             <Input
               name="institution"
               value={form.institution}
               onChange={handleChange}
+              placeholder="Digite a instituição que se formou..."
             />
             {errors.institution && (
               <span className="text-xs text-red-500">{errors.institution}</span>
             )}
           </div>
           <div className="flex flex-col gap-1">
-            <Label className="text-sm font-medium text-gray-700">Curso *</Label>
+            <Label className="text-sm font-medium text-gray-700">
+              Curso <span className="text-red-700">*</span>{" "}
+            </Label>
             <Input name="course" value={form.course} onChange={handleChange} />
             {errors.course && (
               <span className="text-xs text-red-500">{errors.course}</span>
@@ -322,7 +335,7 @@ export const CurriculumForm = () => {
         <>
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">
-              Experiência Profissional
+              Experiência Profissional <span className="text-red-700">*</span>
             </label>
             <textarea
               name="professional_experience"
@@ -335,7 +348,7 @@ export const CurriculumForm = () => {
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">
-              Habilidades *
+              Habilidades <span className="text-red-700">*</span>
             </label>
             <textarea
               name="skills"
@@ -355,14 +368,19 @@ export const CurriculumForm = () => {
       {/* ── Etapa 3: Documentos ── */}
       {step === 3 && (
         <>
+          <div>
+            <Typograph tag="paragraph" className="text-yellow-primary text-center font-bold">
+              Solicitamos a documentação abaixo para habilitação de ensino
+            </Typograph>
+          </div>
           <InputFile
-            label="Documento Pessoal *"
+            label="Documento Pessoal (ex: CNH, RG...) *"
             name="personal_document"
             error={errors.personal_document}
             onChange={handleFile}
           />
           <InputFile
-            label="Documento Profissional *"
+            label="Documento Profissional (ex: Certificado de formação...) *"
             name="professional_document"
             error={errors.professional_document}
             onChange={handleFile}
@@ -392,7 +410,7 @@ export const CurriculumForm = () => {
           {loading
             ? "Enviando..."
             : step === STEPS.length - 1
-              ? "Enviar Currículo"
+              ? "Enviar"
               : "Próximo →"}
         </button>
       </div>

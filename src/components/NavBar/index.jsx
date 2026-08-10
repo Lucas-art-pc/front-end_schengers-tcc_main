@@ -3,7 +3,7 @@ import { LinkVariable } from "../Link";
 const links = [
   { href: "/", label: "Home", type: "secondary" },
   { href: "/courses-schengers", label: "Cursos", type: "secondary" },
-  { href: "/auth/register-teacherUser", label: "Trabalhe conosco", type: "secondary" },
+  { href: "/auth/register-teacherUser", label: "Junte-se a nós", type: "secondary" },
   { href: "/learn-more", label: "Saiba Mais", type: "secondary" },
   { href: "/auth/register-student", label: "ÁREA ESTUDANTE", type: "primary" },
 ];

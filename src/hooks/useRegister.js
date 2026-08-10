@@ -33,7 +33,6 @@ export function useRegister({ registerFn, initialForm, redirectTo }) {
       resetForm()
       navigate(redirectTo)
     } catch (err) {
-      resetForm()
       if (err.response?.data?.errors) {
         const firstError = Object.values(err.response.data.errors).flat()[0]
         setError(firstError)

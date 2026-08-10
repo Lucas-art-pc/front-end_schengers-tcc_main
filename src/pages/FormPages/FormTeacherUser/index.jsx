@@ -102,7 +102,7 @@ export const FormTeacherUser = () => {
           />
         </div>
         <div>
-          <Label>Email</Label>
+          <Label>E-mail</Label>
           <Input
             type={"text"}
             name={"email"}

@@ -28,7 +28,7 @@ const { form, error, loading, handleChange, onSubmit } = useLogin({
       )}
       <div className="space-y-5">
         <div>
-          <Label>Email</Label>
+          <Label>E-mail</Label>
           <Input
             type={"text"}
             name={"email"}
