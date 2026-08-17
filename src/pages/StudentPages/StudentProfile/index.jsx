@@ -118,7 +118,7 @@ const handleAvatarChange = async (e) => {
             <p className="text-gray-500">Email: {user.email}</p>
             <p className="text-blue-primary">
               Data de nascimento:{" "}
-              {new Date(user.date_of_birthday).toLocaleDateString("pt-BR")}
+              {user.date_of_birthday?.split("-").reverse().join("/")}
             </p>
           </div>
         </div>
