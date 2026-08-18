@@ -108,7 +108,7 @@ export const CoursesMarketing = () => {
       <section className="relative overflow-hidden bg-linear-to-br from-[#1E40AF] to-[#0B2373] py-24 text-center text-white">
         {/* elementos decorativos */}
         <div className="absolute -top-10 -left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-[#FCAC21]/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-10 -right-10 w-72 h-72 bg-yellow-primary/10 rounded-full blur-3xl" />
 
         <div className="relative max-w-2xl mx-auto px-6">
           <Typograph

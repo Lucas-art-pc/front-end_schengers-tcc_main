@@ -32,8 +32,8 @@ export const StudentProfile = () => {
       setUser(userData);
       setAvatarUrl(
         userData.url_image_profile
-          ? `http://localhost:8000/storage/${userData.url_image_profile}`
-          : "http://localhost:8000/storage/avatars/foto-avatar.jpg"
+          ? `https://schengers-backend-production.up.railway.app/storage/${userData.url_image_profile}`
+          : "https://schengers-backend-production.up.railway.app/storage/avatars/foto-avatar.png"
       );
     } catch (error) {
       console.error(error);
@@ -118,7 +118,7 @@ const handleAvatarChange = async (e) => {
             <p className="text-gray-500">Email: {user.email}</p>
             <p className="text-blue-primary">
               Data de nascimento:{" "}
-              {new Date(user.date_of_birthday).toLocaleDateString("pt-BR")}
+              {user.date_of_birthday?.split("-").reverse().join("/")}
             </p>
           </div>
         </div>

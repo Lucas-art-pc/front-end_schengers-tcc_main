@@ -108,7 +108,7 @@ export const ListStudents = () => {
                     </td>
                     <td className="px-4 py-3 text-slate-400">{s.email}</td>
                     <td className="px-4 py-3 text-slate-600">
-                      {new Date(s.date_of_birth).toLocaleDateString("pt-BR")}
+                      {s.date_of_birth?.split("-").reverse().join("/")}
                     </td>
                     <td className="px-4 py-3">
                       <span className="bg-slate-100 text-slate-500 text-xs font-medium px-2.5 py-1 rounded-full">
