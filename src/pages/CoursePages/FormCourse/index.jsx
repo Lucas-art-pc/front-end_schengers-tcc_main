@@ -77,7 +77,7 @@ export default function CourseForm() {
         });
         if (data.url_image_course) {
           setImagePreview(
-            `http://localhost:8000/storage/${data.url_image_course}`,
+            `https://schengers-backend-production.up.railway.app/storage/${data.url_image_course}`,
           );
         }
         setClasses(data.classes ?? []);

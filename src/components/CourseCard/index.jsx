@@ -4,7 +4,7 @@ export const CourseCard = ({ course }) => (
   <div className="bg-white rounded-lg shadow-sm hover:shadow-md transition overflow-hidden group cursor-pointer">
     <div className="h-48 overflow-hidden">
       <img
-        src={`http://localhost:8000/storage/${course.image}`}
+        src={`https://schengers-backend-production.up.railway.app/storage/${course.image}`}
         alt={course.title}
         loading="lazy"
         className="w-full h-full object-cover group-hover:scale-105 transition"

@@ -93,7 +93,7 @@ export const StudentDashboard = () => {
       ...(selectedArea && { area_slug: selectedArea }), // alinha com o backend
     };
     // ativa loading a cada nova busca
-    console.log("selectedArea:", selectedArea); // adiciona temporariamente
+   
     indexCourses(params)
       .then((data) => setCourses(data.data ?? []))
       .catch(console.error)
