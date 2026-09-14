@@ -14,11 +14,14 @@ import { getCourseContent } from "../../../api/services/courses/coursesService";
 // ─── Sub-componentes ────────────────────────────────────────────
 
 const LessonCard = ({ lesson, courseId, onNavigate }) => {
-  const completed = lesson.is_completed;
+  const completed = lesson.is_completed; // ajuste conforme o nome real da prop
 
   return (
     <div
-      className={`flex items-center justify-between p-4 rounded-lg shadow transition-colors ${
+      onClick={() =>
+        onNavigate(`/student/course/${courseId}/lesson/${lesson.public_id}`)
+      }
+      className={`flex items-center justify-between p-4 rounded-lg shadow transition-colors cursor-pointer ${
         completed
           ? "bg-green-50 border border-green-200"
           : "bg-white hover:bg-gray-50"
@@ -40,16 +43,13 @@ const LessonCard = ({ lesson, courseId, onNavigate }) => {
         </div>
       </div>
 
-      <button
-        onClick={() =>
-          onNavigate(`/student/course/${courseId}/lesson/${lesson.public_id}`)
-        }
-        className={`text-sm font-medium hover:underline shrink-0 ${
+      <span
+        className={`text-sm font-medium shrink-0 ${
           completed ? "text-green-500" : "text-blue-primary"
         }`}
       >
         {completed ? "Rever" : "Assistir"}
-      </button>
+      </span>
     </div>
   );
 };
@@ -59,7 +59,10 @@ const ActivityCard = ({ activity, courseId, onNavigate }) => {
 
   return (
     <div
-      className={`flex items-center justify-between p-4 rounded-lg shadow transition-colors ${
+      onClick={() =>
+        onNavigate(`/student/course/${courseId}/activity/${activity.public_id}`)
+      }
+      className={`flex items-center justify-between p-4 rounded-lg shadow transition-colors cursor-pointer ${
         completed
           ? "bg-green-50 border border-green-200"
           : "bg-white hover:bg-gray-50"
@@ -81,18 +84,13 @@ const ActivityCard = ({ activity, courseId, onNavigate }) => {
         </div>
       </div>
 
-      <button
-        onClick={() =>
-          onNavigate(
-            `/student/course/${courseId}/activity/${activity.public_id}`,
-          )
-        }
-        className={`text-sm font-medium hover:underline shrink-0 ${
+      <span
+        className={`text-sm font-medium shrink-0 ${
           completed ? "text-green-500" : "text-green-600"
         }`}
       >
         {completed ? "Rever" : "Fazer"}
-      </button>
+      </span>
     </div>
   );
 };
@@ -193,7 +191,7 @@ export const StudentCoursePage = () => {
         {/* Esquerda */}
         <div className="flex items-center gap-4">
           <button
-            onClick={() => navigate(-1)}
+            onClick={() => navigate(`/student/enroll-course/${course.public_id}`)}
             className="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
           >
             <ArrowLeft size={18} />

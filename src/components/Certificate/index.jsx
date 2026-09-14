@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { getCertificate } from "../../api/services/courses/coursesService";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 export const Certificate = () => {
   const [certificate, setCertificate] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { id } = useParams();
+  const navigate = useNavigate();
   const printRef = useRef();
 
   useEffect(() => {
@@ -56,6 +58,7 @@ export const Certificate = () => {
   if (loading) {
     return (
       <div style={styles.pageWrapper}>
+        
         <div style={styles.skeletonCard}>
           <div style={styles.skeletonBar} />
           <div style={{ ...styles.skeletonLine, width: "30%", margin: "0 auto 12px" }} />
@@ -147,9 +150,6 @@ export const Certificate = () => {
               <div style={styles.hashBlock}>
                 <p style={styles.hashLabel}>CÓDIGO DE VALIDAÇÃO</p>
                 <p style={styles.hashValue}>{certificate.hash}</p>
-                {certificate.validated_url && (
-                  <p style={styles.hashUrl}>{certificate.validated_url}</p>
-                )}
               </div>
               <div style={styles.signatureBlock}>
                 <div style={styles.signatureLine} />
@@ -179,6 +179,15 @@ export const Certificate = () => {
         >
           Imprimir certificado
         </button>
+        <button
+          onClick={() => navigate(-1)}
+          style={styles.backButton}
+          onMouseEnter={e => e.currentTarget.style.background = "#f1f5f9"}
+          onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+        >
+          <ArrowLeft size={16} />
+          Voltar
+        </button>
       </div>
     </div>
   );
@@ -195,6 +204,27 @@ const styles = {
     gap: "2rem",
     padding: "2.5rem 1rem",
     fontFamily: "'Inter', sans-serif",
+  },
+
+  backButtonWrapper: {
+    width: "100%",
+    maxWidth: "277mm",
+    display: "flex",
+    justifyContent: "flex-start",
+  },
+  backButton: {
+    display: "flex",
+    alignItems: "center",
+    gap: "6px",
+    background: "transparent",
+    border: "1px solid #dbeafe",
+    borderRadius: "8px",
+    padding: "0.5rem 1rem",
+    fontSize: "13px",
+    fontWeight: "500",
+    color: "#1E40AF",
+    cursor: "pointer",
+    transition: "background 0.2s ease",
   },
 
   /* Certificado */

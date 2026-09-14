@@ -61,7 +61,7 @@ export const CourseDetails = () => {
   <section className="bg-blue-primary text-white p-6 md:p-10">
     <div className="flex items-center gap-4 mb-6">
       <button
-        onClick={() => navigate(-1)}
+        onClick={() => navigate(`/student/dashboard`)}
         className="flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg"
       >
         <ArrowLeft size={18} />

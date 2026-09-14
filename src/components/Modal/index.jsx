@@ -81,6 +81,8 @@ export const Modal = ({ onClose, onCreate, daysOfWeek, task }) => {
 
           <input
             type="number"
+            min="0"
+            max="240"
             name="duration_study_plan"
             placeholder="Duração (min)"
             value={formTask.duration_study_plan}
