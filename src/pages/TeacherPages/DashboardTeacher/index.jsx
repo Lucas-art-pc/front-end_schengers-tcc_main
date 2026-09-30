@@ -31,11 +31,11 @@ export const DashboardTeacher = () => {
 
   return (
     <PageContainerTeacher title="Dashboard">
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-4 gap-4 mb-6"> 
         <CardDashboardTeacher title="Cursos" value={dataCourses?.total_courses ?? 0} />
         <CardDashboardTeacher title="Aulas" value={dataCourses?.total_lessons ?? 0} />
         <CardDashboardTeacher title="Atividades" value={dataCourses?.total_activities ?? 0} />
-        <CardDashboardTeacher title="Alunos" value="120" />
+        <CardDashboardTeacher title="Alunos" value={dataCourses?.total_students ?? 0} />
       </div>
 
       {/* gráfico */}
