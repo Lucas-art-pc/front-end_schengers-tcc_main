@@ -47,8 +47,7 @@ export const AdminSupportList = () => {
       const data = await getAllSupports();
       setSupports(Array.isArray(data) ? data : data?.data ?? []);
     } catch (err) {
-      console.log(err)
-      setError("Não foi possível carregar as mensagens de suporte.");
+      setError("Não foi possível carregar as mensagens de suporte.", err);
     } finally {
       setLoading(false);
     }
@@ -69,9 +68,8 @@ export const AdminSupportList = () => {
     try {
       await updateSupportStatus(public_id, boolStatus);
     } catch (err) {
-      console.log(err)
       setSupports(previous);
-      setError("Não foi possível atualizar o status. Tente novamente.");
+      setError("Não foi possível atualizar o status. Tente novamente.", err);
     } finally {
       setUpdatingId(null);
     }
@@ -83,8 +81,7 @@ export const AdminSupportList = () => {
       await deleteSupport(public_id);
       setSupports((prev) => prev.filter((s) => s.public_id !== public_id));
     } catch (err) {
-      console.log(err)
-      setError("Não foi possível excluir esta mensagem.");
+      setError("Não foi possível excluir esta mensagem.", err);
     } finally {
       setDeletingId(null);
       setConfirmDeleteId(null);

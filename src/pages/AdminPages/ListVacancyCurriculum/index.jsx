@@ -76,9 +76,6 @@ export const ListVacancyCurriculum = () => {
       .finally(() => setLoading(false));
    
   }, []);
-
-  console.log(vacancies)
-
   
 
   const vagasFiltradas = vacancies.filter((v) => {

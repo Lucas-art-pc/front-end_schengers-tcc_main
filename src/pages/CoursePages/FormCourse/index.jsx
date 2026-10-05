@@ -1,13 +1,4 @@
 import { useState, useEffect } from "react";
-import {
-  Clock,
-  Video,
-  AlignLeft,
-  Pencil,
-  Trash2,
-  Check,
-  X,
-} from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   createCourses,
@@ -232,7 +223,6 @@ export default function CourseForm() {
         );
       } else {
         const response = await createActivity(id, formData);
-        console.log(response);
         setActivities((prev) => [...prev, response.data]);
       }
       setActivityModal(null);

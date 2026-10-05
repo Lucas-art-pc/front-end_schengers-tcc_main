@@ -237,17 +237,13 @@ export const ListCurriculum = () => {
       const fetchCourseData = async () => {
         try {
           const data = await curriculumByVacancy(id);
-          console.log(data)
     
           if (!data) {
-            console.error("Curso não encontrado.");
             return;
           }
-    
           setVaga(data);
         } catch (error) {
           console.error(error);
-          console.error("Erro ao carregar o curso. Tente novamente.");
         } finally {
           setLoading(false);
         }

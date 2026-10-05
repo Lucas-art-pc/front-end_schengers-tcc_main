@@ -271,6 +271,7 @@ export const CurriculumDetails = () => {
   const navigate = useNavigate();
   const [curriculum, setCurriculum] = useState(null); // objeto único, não array
   const [loading, setLoading] = useState(true);
+  const [erro, setError] = useState(true);
   const [status, setStatus] = useState("pending");
   const [modal, setModal] = useState(null); // null | "approve" | "reject"
 
@@ -278,10 +279,9 @@ export const CurriculumDetails = () => {
     const fetchCurriculum = async () => {
       try {
         const data = await showCurriculumByVacancy(idCurriculum);
-        console.log(data); // confirme a estrutura aqui
         setCurriculum(data);
       } catch (error) {
-        console.error(error);
+        setError(error)
       } finally {
         setLoading(false);
       }
@@ -306,7 +306,7 @@ const confirmApprove = async () => {
     await approveCurriculum(idCurriculum);
     setStatus("approved");
   } catch (err) {
-    console.error("Erro ao aprovar:", err);
+    if (err) return <p className="text-slate-400 text-sm">{erro}</p>;
   } finally {
     setModal(null);
   }
@@ -317,7 +317,7 @@ const confirmReject = async () => {
     await rejectCurriculum(idCurriculum);
     setStatus("rejected");
   } catch (err) {
-    console.error("Erro ao rejeitar:", err);
+    if (err) return <p className="text-slate-400 text-sm">{erro}</p>;
   } finally {
     setModal(null);
   }

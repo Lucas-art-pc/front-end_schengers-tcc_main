@@ -3,19 +3,7 @@ import { ClipboardList, Bell, Send, Loader2 } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { sendTask } from "../../../api/services/admin/dataService";
 
-/**
- * Formulário único que envia para tb_task, alternando entre:
- *  - type_task: "task"          -> title_task, description_task, deadline_task, time_task
- *  - type_task: "notification"  -> title_task, description_task
- *
- * Campos batem com a validação do Laravel:
- * fk_id_teacher | required | exists:tb_teacher,id
- * title_task        | required
- * description_task  | required|string|min:5
- * deadline_task      | date               (só enviado quando type_task = task)
- * time_task    | integer|max_digits:2  (horas do curso, só quando type_task = task)
- * type_task          | required|in:task,notification
- */
+
 export const FormTaskTeacher = () => {
   const [typeTask, setTypeTask] = useState("task"); // "task" | "notification"
   const [loading, setLoading] = useState(false);

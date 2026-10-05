@@ -22,12 +22,7 @@ export const ListVacanciesAdmin = () => {
       .catch(() => setError("Erro ao carregar cursos."))
       .finally(() => setLoading(false));
   }, []);
-
-  console.log(vacancies)
-
-
   
-
   const filteredJobs = vacancies.filter((job) => {
     const matchesSearch = job.title_vacancy
       ?.toLowerCase()
@@ -36,9 +31,6 @@ export const ListVacanciesAdmin = () => {
     return matchesSearch && matchesType;
   });
 
-  
-    
-  
 
   return (
     <div className="flex min-h-screen bg-gray-50">

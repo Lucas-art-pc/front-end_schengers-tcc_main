@@ -56,17 +56,6 @@ export const ActivityModal = ({ initial, onSave, onClose }) => {
 
   const [errors, setErrors] = useState({});
 
-  
-
-  function handleRemoveAlternative(index) {
-    setForm((prev) => {
-      const alternatives = prev.alternatives
-        .filter((_, i) => i !== index)
-        .map((alt, i) => ({ ...alt, title_alternative: String.fromCharCode(65 + i) }));
-      return { ...prev, alternatives };
-    });
-  }
-
   function handleAlternativeChange(index, field, value) {
     setForm((prev) => {
       const alternatives = [...prev.alternatives];
@@ -224,16 +213,7 @@ export const ActivityModal = ({ initial, onSave, onClose }) => {
                     className="flex-1 text-sm text-gray-800 bg-transparent outline-none placeholder-gray-300 min-w-0"
                   />
 
-                  {form.alternatives.length > 2 && (
-                    <button
-                      type="button"
-                      onClick={() => handleRemoveAlternative(index)}
-                      className="text-gray-300 hover:text-rose-400 text-lg leading-none transition-colors shrink-0"
-                      title="Remover alternativa"
-                    >
-                      ×
-                    </button>
-                  )}
+                  
                 </div>
               ))}
             </div>

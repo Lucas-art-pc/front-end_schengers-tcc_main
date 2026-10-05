@@ -77,7 +77,6 @@ const handleCreate = async (payload) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await listAreas();
-      console.log(response)
       setAreas(response);
     };
 

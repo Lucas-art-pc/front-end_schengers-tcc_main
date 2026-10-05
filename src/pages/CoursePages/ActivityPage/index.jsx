@@ -19,7 +19,6 @@ export const ActivityPage = () => {
     const fetchActivity = async () => {
       try {
         const response = await showActivity(id, activityId);
-        console.log(response)
         setActivity(response);
 
         if (response?.answer) {

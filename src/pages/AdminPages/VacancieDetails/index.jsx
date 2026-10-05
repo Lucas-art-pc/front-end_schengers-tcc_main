@@ -154,7 +154,6 @@ export const VacancyDetails = () => {
     const fetchVacancie = async () => {
       try {
         const data = await showVacancy(idVacancy);
-        console.log(data);
         setVacancy(data.vacancy);
       } catch (error) {
         console.error(error);
