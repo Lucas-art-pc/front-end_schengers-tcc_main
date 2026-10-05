@@ -18,47 +18,58 @@ function age(dob) {
 
 export const ListStudents = () => {
   const [students, setStudents] = useState([]);
-  const [meta, setMeta] = useState(null);
+  const [pagination, setPagination] = useState({
+    current_page: 1,
+    last_page: 1,
+    total: 0,
+  });
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Espera o usuário parar de digitar e volta para a página 1
-  // Debounce: o setState fica dentro do callback do timeout, o que é permitido
-useEffect(() => {
-  const t = setTimeout(() => {
-    setDebouncedSearch(search);
-    setPage(1);
-  }, 400);
-  return () => clearTimeout(t);
-}, [search]);
+  useEffect(() => {
+    const t = setTimeout(() => {
+      setLoading(true);
+      setDebouncedSearch(search);
+      setPage(1);
+    }, 400);
+    return () => clearTimeout(t);
+  }, [search]);
 
-useEffect(() => {
-  let cancelled = false;
+  useEffect(() => {
+    let cancelled = false;
 
-  listStudents(page, debouncedSearch)
-    .then((res) => {
-      if (cancelled) return;
-      setStudents(res.students?? []);
-      setMeta(res.meta ?? null);
-      setError(null);
-    })
-    .catch(() => {
-      if (!cancelled) setError("Erro ao carregar alunos.");
-    })
-    .finally(() => {
-      if (!cancelled) setLoading(false);
-    });
+    listStudents(page, debouncedSearch)
+      .then((res) => {
+        if (cancelled) return;
+        setStudents(res.data ?? []);
+        setPagination({
+          current_page: res.current_page ?? 1,
+          last_page: res.last_page ?? 1,
+          total: res.total ?? 0,
+        });
+        setError(null);
+      })
+      .catch(() => {
+        if (!cancelled) setError("Erro ao carregar alunos.");
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
 
-  return () => {
-    cancelled = true;
+    return () => {
+      cancelled = true;
+    };
+  }, [page, debouncedSearch]);
+
+  const goToPage = (p) => {
+    setLoading(true);
+    setPage(p);
   };
-}, [page, debouncedSearch]);
-  
-  const total = meta?.total ?? 0;
-  const lastPage = meta?.last_page ?? 1;
+
+  const { total, last_page: lastPage, current_page: currentPage } = pagination;
 
   return (
     <>
@@ -104,12 +115,18 @@ useEffect(() => {
                   Carregando...
                 </td>
               </tr>
+            ) : students.length === 0 ? (
+              <tr>
+                <td colSpan={4} className="text-center py-12 text-slate-400">
+                  Nenhum aluno encontrado
+                </td>
+              </tr>
             ) : (
               students.map((s, i) => {
                 const av = AVATARS[i % AVATARS.length];
                 return (
                   <tr
-                    key={s.id ?? s.email}
+                    key={s.id}
                     className="border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors"
                   >
                     <td className="px-4 py-3">
@@ -126,11 +143,11 @@ useEffect(() => {
                     </td>
                     <td className="px-4 py-3 text-slate-400">{s.email}</td>
                     <td className="px-4 py-3 text-slate-600">
-                      {s.date_of_birth?.split("-").reverse().join("/")}
+                      {s.date_of_birthday?.split("-").reverse().join("/")}
                     </td>
                     <td className="px-4 py-3">
                       <span className="bg-slate-100 text-slate-500 text-xs font-medium px-2.5 py-1 rounded-full">
-                        {age(s.date_of_birth)} anos
+                        {age(s.date_of_birthday)} anos
                       </span>
                     </td>
                   </tr>
@@ -148,17 +165,17 @@ useEffect(() => {
 
         <div className="flex items-center gap-2">
           <button
-            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            onClick={() => goToPage(Math.max(1, page - 1))}
             disabled={page <= 1 || loading}
             className="px-3 py-1.5 text-xs border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed"
           >
             Anterior
           </button>
           <span className="text-xs text-slate-500">
-            Página {meta?.current_page ?? page} de {lastPage}
+            Página {currentPage} de {lastPage}
           </span>
           <button
-            onClick={() => setPage((p) => Math.min(lastPage, p + 1))}
+            onClick={() => goToPage(Math.min(lastPage, page + 1))}
             disabled={page >= lastPage || loading}
             className="px-3 py-1.5 text-xs border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed"
           >
