@@ -7,9 +7,8 @@ const AVATARS = [
   { bg: "bg-green-100", color: "text-green-900" },
 ];
 
-
-
 function age(dob) {
+  if (!dob) return "-";
   const b = new Date(dob),
     today = new Date();
   let a = today.getFullYear() - b.getFullYear();
@@ -19,24 +18,47 @@ function age(dob) {
 
 export const ListStudents = () => {
   const [students, setStudents] = useState([]);
+  const [meta, setMeta] = useState(null);
+  const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    listStudents()
-      .then(setStudents)
-      .catch(() => setError("Erro ao carregar alunos."))
-      .finally(() => setLoading(false));
-  }, []);
+  // Espera o usuário parar de digitar e volta para a página 1
+  // Debounce: o setState fica dentro do callback do timeout, o que é permitido
+useEffect(() => {
+  const t = setTimeout(() => {
+    setDebouncedSearch(search);
+    setPage(1);
+  }, 400);
+  return () => clearTimeout(t);
+}, [search]);
 
-  const filtered = students.filter(
-    (s) =>
-      s.name.toLowerCase().includes(search.toLowerCase()) ||
-      s.email.toLowerCase().includes(search.toLowerCase()),
-  );
+useEffect(() => {
+  let cancelled = false;
 
-  if (loading) return <p className="text-slate-400 text-sm">Carregando...</p>;
+  listStudents(page, debouncedSearch)
+    .then((res) => {
+      if (cancelled) return;
+      setStudents(res.students?? []);
+      setMeta(res.meta ?? null);
+      setError(null);
+    })
+    .catch(() => {
+      if (!cancelled) setError("Erro ao carregar alunos.");
+    })
+    .finally(() => {
+      if (!cancelled) setLoading(false);
+    });
+
+  return () => {
+    cancelled = true;
+  };
+}, [page, debouncedSearch]);
+  
+  const total = meta?.total ?? 0;
+  const lastPage = meta?.last_page ?? 1;
 
   return (
     <>
@@ -65,33 +87,29 @@ export const ListStudents = () => {
         <table className="w-full text-sm border-collapse">
           <thead>
             <tr className="border-b border-slate-200">
-              <th className="text-left px-4 py-3 text-xs font-medium text-slate-400 uppercase tracking-wide">
-                Nome
-              </th>
-              <th className="text-left px-4 py-3 text-xs font-medium text-slate-400 uppercase tracking-wide">
-                E-mail
-              </th>
-              <th className="text-left px-4 py-3 text-xs font-medium text-slate-400 uppercase tracking-wide">
-                Nascimento
-              </th>
-              <th className="text-left px-4 py-3 text-xs font-medium text-slate-400 uppercase tracking-wide">
-                Idade
-              </th>
+              {["Nome", "E-mail", "Nascimento", "Idade"].map((h) => (
+                <th
+                  key={h}
+                  className="text-left px-4 py-3 text-xs font-medium text-slate-400 uppercase tracking-wide"
+                >
+                  {h}
+                </th>
+              ))}
             </tr>
           </thead>
-          <tbody>
-            {filtered.length === 0 ? (
+          <tbody className={loading ? "opacity-50 transition-opacity" : ""}>
+            {loading && students.length === 0 ? (
               <tr>
                 <td colSpan={4} className="text-center py-12 text-slate-400">
-                  Nenhum aluno encontrado
+                  Carregando...
                 </td>
               </tr>
             ) : (
-              filtered.map((s, i) => {
+              students.map((s, i) => {
                 const av = AVATARS[i % AVATARS.length];
                 return (
                   <tr
-                    key={s.email}
+                    key={s.id ?? s.email}
                     className="border-b border-slate-100 last:border-0 hover:bg-slate-50 transition-colors"
                   >
                     <td className="px-4 py-3">
@@ -99,7 +117,7 @@ export const ListStudents = () => {
                         <div
                           className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium shrink-0 ${av.bg} ${av.color}`}
                         >
-                          {s.name.substring(0,2).toUpperCase()}
+                          {s.name.substring(0, 2).toUpperCase()}
                         </div>
                         <span className="font-medium text-slate-700">
                           {s.name}
@@ -123,9 +141,31 @@ export const ListStudents = () => {
         </table>
       </div>
 
-      <p className="text-xs text-slate-400 mt-3">
-        {filtered.length} aluno{filtered.length !== 1 ? "s" : ""}
-      </p>
+      <div className="flex items-center justify-between mt-3">
+        <p className="text-xs text-slate-400">
+          {total} aluno{total !== 1 ? "s" : ""}
+        </p>
+
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setPage((p) => Math.max(1, p - 1))}
+            disabled={page <= 1 || loading}
+            className="px-3 py-1.5 text-xs border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            Anterior
+          </button>
+          <span className="text-xs text-slate-500">
+            Página {meta?.current_page ?? page} de {lastPage}
+          </span>
+          <button
+            onClick={() => setPage((p) => Math.min(lastPage, p + 1))}
+            disabled={page >= lastPage || loading}
+            className="px-3 py-1.5 text-xs border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            Próxima
+          </button>
+        </div>
+      </div>
     </>
   );
 };

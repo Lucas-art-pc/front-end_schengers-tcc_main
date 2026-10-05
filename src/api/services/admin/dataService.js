@@ -10,10 +10,13 @@ export const classesPerArea = async () => {
   return response.data;
 }
 
-export const listStudents = async () => {
-  const response = await api.get("admin/listStudents")
-  return response.data.students;
-}
+export const listStudents = async (page = 1, search = "") => {
+  const response = await api.get("/admin/listStudents", {
+    params: { page, search },
+  });
+  return response.data; // { data, links, meta }
+};
+ 
 
 export const listTeachers = async () => {
   const response = await api.get("admin/listTeachers")

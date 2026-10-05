@@ -86,7 +86,16 @@ export const LessonPlayer = () => {
       </div>
 
       {/* Ações futuras */}
-      <div className="mt-6 flex gap-4">
+      <div className="mt-6 flex justify-end gap-4">
+        
+
+        <button
+          onClick={() => navigate(`/student/course/${id}`)}
+          className="px-6 py-2 bg-gray-200 rounded-lg"
+        >
+          Voltar ao curso
+        </button>
+
         <button
           onClick={watched}
           disabled={isWatched}
@@ -99,13 +108,6 @@ export const LessonPlayer = () => {
     `}
         >
           {isWatched ? "Assistida" : "Marcar como assistida"}
-        </button>
-
-        <button
-          onClick={() => navigate(`/student/course/${id}`)}
-          className="px-6 py-2 bg-gray-200 rounded-lg"
-        >
-          Voltar ao curso
         </button>
       </div>
     </main>

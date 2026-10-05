@@ -121,10 +121,11 @@ export const StudentDashboard = () => {
     <main className="flex-1 p-8">
       {/* Saudação */}
       <Typograph tag="title_large" className="mb-6 text-blue-primary">
-        Bem-vindo,{" "}
+        Bem-vindo(a),{" "}
         <span className="text-yellow-primary">
-          {loadingUser ? <UsernameSkeleton /> : user?.name}
+          {loadingUser ? <UsernameSkeleton /> : user?.name} !
         </span>
+        
       </Typograph>
 
       {/* Busca */}
